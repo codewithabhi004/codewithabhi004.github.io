@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#09090b">
+  <meta name="description" content="Abhishek's student portfolio — a BCA student learning web development and building a chatbot project.">
+  <title>Abhishek | BCA Student Learning Web Development</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <canvas id="dustCanvas" aria-hidden="true"></canvas>
+  <div class="light-beam" aria-hidden="true"></div>
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="Abhishek, home">
+      <span class="brand-mark">A</span>
+      <span>abhishek<span class="brand-period">.</span></span>
+    </a>
+
+    <nav class="site-nav" id="siteNav" aria-label="Main navigation">
+      <a class="nav-link active" href="#home">Home</a>
+      <a class="nav-link" href="#about">About</a>
+      <a class="nav-link" href="#learning">Learning</a>
+      <a class="nav-link" href="#projects">Projects</a>
+      <a class="nav-link" href="#contact">Contact</a>
+    </nav>
+
+    <div class="header-actions">
+      <div class="lamp-controls" role="group" aria-label="Page lighting">
+        <button type="button" class="lamp-toggle" id="pullCord" aria-label="Toggle ambient light" title="Toggle ambient light (L)">
+          <span class="lamp-toggle-icon" aria-hidden="true">✦</span>
+        </button>
+        <label class="sr-only" for="brightnessSlider">Ambient light brightness</label>
+        <input type="range" id="brightnessSlider" min="0" max="100" value="70">
+        <span class="brightness-value" id="brightnessValue">70%</span>
+      </div>
+      <div class="theme-dots" role="group" aria-label="Choose accent theme">
+        <button type="button" class="theme-dot active" data-theme="warm" aria-label="Warm amber theme" aria-pressed="true"></button>
+        <button type="button" class="theme-dot" data-theme="daylight" aria-label="Daylight blue theme" aria-pressed="false"></button>
+        <button type="button" class="theme-dot" data-theme="neon" aria-label="Violet theme" aria-pressed="false"></button>
+      </div>
+    </div>
+
+    <button class="menu-toggle" id="menuToggle" type="button" aria-expanded="false" aria-controls="siteNav" aria-label="Open navigation">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <p class="light-hint" id="lightHint"><span class="pulse-dot"></span>Adjust the light to set the mood <span class="hint-shortcut">· Press L to toggle</span></p>
+
+  <main id="main">
+    <section class="hero section-shell" id="home" aria-labelledby="heroTitle">
+      <div class="hero-copy reveal">
+        <p class="eyebrow"><span class="status-dot"></span> BCA student <span class="eyebrow-separator">/</span> learning by building</p>
+        <h1 id="heroTitle">Hi, I’m <span class="accent-text">Abhishek</span>.<br>I turn curiosity into <span class="hero-outline">code.</span></h1>
+        <p class="hero-description">I’m exploring web development, one project at a time. Right now, I’m learning React, Node.js and Next.js while building a chatbot as part of my program.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#projects">Explore my work <span aria-hidden="true">↗</span></a>
+          <a class="button button-quiet" href="#about">A little about me <span aria-hidden="true">↓</span></a>
+        </div>
+        <div class="hero-meta">
+          <span class="availability"><span class="status-dot"></span> Open to learning & collaboration</span>
+          <span class="hero-location">Currently pursuing BCA</span>
+        </div>
+      </div>
+
+      <div class="hero-art reveal" aria-label="Decorative glowing desk lamp and code window">
+        <div class="orbit orbit-one"></div>
+        <div class="orbit orbit-two"></div>
+        <div class="art-glow"></div>
+        <div class="desk-lamp" aria-hidden="true">
+          <span class="lamp-wire"></span>
+          <span class="lamp-arm"></span>
+          <span class="lamp-shade"></span>
+          <span class="lamp-bulb"></span>
+          <span class="lamp-pool"></span>
+        </div>
+        <div class="code-window">
+          <div class="window-top"><span></span><span></span><span></span><small>abhishek.js</small></div>
+          <div class="code-lines" aria-hidden="true">
+            <p><span class="code-purple">const</span> <span class="code-blue">learner</span> = {</p>
+            <p class="indent"><span class="code-green">name</span>: <span class="code-yellow">"Abhishek"</span>,</p>
+            <p class="indent"><span class="code-green">focus</span>: [</p>
+            <p class="indent double-indent"><span class="code-yellow">"React"</span>, <span class="code-yellow">"Node.js"</span>,</p>
+            <p class="indent double-indent"><span class="code-yellow">"Next.js"</span></p>
+            <p class="indent">],</p>
+            <p class="indent"><span class="code-green">mindset</span>: <span class="code-yellow">"keep building"</span></p>
+            <p>}; <span class="code-comment">// one step at a time</span></p>
+          </div>
+          <span class="window-cursor" aria-hidden="true"></span>
+        </div>
+        <div class="floating-tag tag-top"><span>✦</span> curious by nature</div>
+        <div class="floating-tag tag-bottom"><span class="mini-pulse"></span> currently learning</div>
+      </div>
+      <a class="scroll-cue" href="#about"><span></span> Scroll to explore</a>
+    </section>
+
+    <section class="about-section section-shell section-space" id="about" aria-labelledby="aboutTitle">
+      <div class="section-heading reveal">
+        <p class="section-kicker">01 <span></span> A LITTLE ABOUT ME</p>
+        <h2 id="aboutTitle">Learning today.<br><span class="muted-heading">Building for tomorrow.</span></h2>
+      </div>
+      <div class="about-grid">
+        <article class="about-story glass-card reveal">
+          <div class="card-icon" aria-hidden="true">✳</div>
+          <h3>My journey so far</h3>
+          <p>I’m Abhishek, a Bachelor of Computer Applications (BCA) student interested in how ideas become useful things on the web. I’m still learning, experimenting and improving with every project.</p>
+          <p>My current focus is understanding modern web development—from building interfaces with React to exploring the server side with Node.js and Next.js.</p>
+          <div class="about-signoff"><span class="signature-mark">A</span><span>Curious mind, hands-on learner</span></div>
+        </article>
+        <div class="about-highlights">
+          <article class="highlight-card reveal">
+            <span class="highlight-number">01</span>
+            <div><h3>Study</h3><p>Pursuing a BCA and strengthening my computer science foundations.</p></div>
+            <span class="highlight-icon" aria-hidden="true">⌘</span>
+          </article>
+          <article class="highlight-card reveal">
+            <span class="highlight-number">02</span>
+            <div><h3>Explore</h3><p>Learning React, Node.js and Next.js through practice and small experiments.</p></div>
+            <span class="highlight-icon" aria-hidden="true">◇</span>
+          </article>
+          <article class="highlight-card reveal">
+            <span class="highlight-number">03</span>
+            <div><h3>Create</h3><p>Working on a chatbot project as part of my learning program.</p></div>
+            <span class="highlight-icon" aria-hidden="true">✧</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="learning-section section-shell section-space" id="learning" aria-labelledby="learningTitle">
+      <div class="section-heading section-heading-row reveal">
+        <div>
+          <p class="section-kicker">02 <span></span> MY LEARNING PATH</p>
+          <h2 id="learningTitle">Tools I’m getting to know<span class="accent-text">.</span></h2>
+        </div>
+        <p class="section-aside">Not claiming mastery—just sharing what I’m exploring right now.</p>
+      </div>
+      <div class="learning-grid">
+        <article class="learning-card learning-featured reveal">
+          <div class="learning-card-top"><span class="tech-symbol react-symbol" aria-hidden="true">⚛</span><span class="learning-status">Learning now</span></div>
+          <h3>React</h3>
+          <p>Exploring component-based UI and how interactive interfaces come together.</p>
+          <div class="learning-progress"><span style="--progress: 52%"></span></div>
+          <span class="progress-label">Learning in progress</span>
+        </article>
+        <article class="learning-card reveal">
+          <div class="learning-card-top"><span class="tech-symbol node-symbol" aria-hidden="true">JS</span><span class="learning-status">Exploring</span></div>
+          <h3>Node.js</h3>
+          <p>Getting familiar with JavaScript beyond the browser and server-side basics.</p>
+          <div class="learning-progress"><span style="--progress: 34%"></span></div>
+          <span class="progress-label">Learning in progress</span>
+        </article>
+        <article class="learning-card reveal">
+          <div class="learning-card-top"><span class="tech-symbol next-symbol" aria-hidden="true">N</span><span class="learning-status">Exploring</span></div>
+          <h3>Next.js</h3>
+          <p>Discovering how a React framework can help structure full web experiences.</p>
+          <div class="learning-progress"><span style="--progress: 28%"></span></div>
+          <span class="progress-label">Learning in progress</span>
+        </article>
+        <article class="learning-card foundation-card reveal">
+          <div class="learning-card-top"><span class="tech-symbol foundation-symbol" aria-hidden="true">&lt;/&gt;</span><span class="learning-status">Project practice</span></div>
+          <h3>Web foundations</h3>
+          <p>HTML, CSS and JavaScript—the building blocks I use while making this portfolio.</p>
+          <div class="foundation-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="projects-section section-shell section-space" id="projects" aria-labelledby="projectsTitle">
+      <div class="section-heading section-heading-row reveal">
+        <div>
+          <p class="section-kicker">03 <span></span> THINGS I’M BUILDING</p>
+          <h2 id="projectsTitle">Small steps. Real projects<span class="accent-text">.</span></h2>
+        </div>
+        <p class="section-aside">A couple of works from my learning journey.</p>
+      </div>
+      <div class="projects-grid">
+        <article class="project-card chatbot-project reveal">
+          <div class="project-visual chatbot-visual">
+            <div class="project-visual-top"><span>CHATBOT / LEARNING PROGRAM</span><span class="project-live"><i></i> IN PROGRESS</span></div>
+            <div class="chat-preview">
+              <div class="chat-avatar">A</div>
+              <div class="chat-bubble">Hey! I’m a chatbot project Abhishek is building. <span>10:42</span></div>
+              <div class="chat-bubble chat-bubble-user">What are you learning? <span>10:43</span></div>
+              <div class="chat-dots"><i></i><i></i><i></i></div>
+            </div>
+            <div class="chat-preview-input"><span>Type a message...</span><b>↑</b></div>
+            <span class="visual-orb orb-chat-one"></span><span class="visual-orb orb-chat-two"></span>
+          </div>
+          <div class="project-details">
+            <div class="project-title-row"><h3>Chatbot project</h3><span class="project-index">01</span></div>
+            <p>A chatbot I’m creating as part of my program. It’s a way to practice designing a friendly chat experience and learn how an app responds to a person.</p>
+            <div class="project-tags"><span>Learning project</span><span>Chat UI</span><span>In progress</span></div>
+            <button type="button" class="text-action" data-open-chat>Try the sample chat <span aria-hidden="true">↗</span></button>
+          </div>
+        </article>
+
+        <article class="project-card portfolio-project reveal">
+          <div class="project-visual portfolio-visual">
+            <div class="portfolio-mock-window">
+              <div class="mock-top"><span></span><span></span><span></span><b>my-portfolio</b></div>
+              <div class="mock-body">
+                <div class="mock-sidebar"><span></span><span></span><span></span><span></span></div>
+                <div class="mock-content">
+                  <span class="mock-label">A STUDENT PORTFOLIO</span>
+                  <span class="mock-title">Ideas into<br><i>interfaces.</i></span>
+                  <span class="mock-lines"></span><span class="mock-button"></span>
+                </div>
+              </div>
+            </div>
+            <span class="visual-orb orb-portfolio"></span>
+          </div>
+          <div class="project-details">
+            <div class="project-title-row"><h3>Luminaire portfolio</h3><span class="project-index">02</span></div>
+            <p>This page—an interactive portfolio experiment inspired by a desk lamp, warm light and the idea of bringing a learning journey into view.</p>
+            <div class="project-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+            <a class="text-action" href="#home">Back to the spotlight <span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="contact-section section-shell section-space" id="contact" aria-labelledby="contactTitle">
+      <div class="contact-card reveal">
+        <div class="contact-light" aria-hidden="true"></div>
+        <p class="section-kicker">04 <span></span> THE NEXT CHAPTER</p>
+        <h2 id="contactTitle">Have an idea?<br><span class="muted-heading">Let’s learn by building.</span></h2>
+        <p class="contact-copy">I’m always happy to talk about learning, web development and creative project ideas.</p>
+        <form class="contact-form" id="contactForm">
+          <div class="contact-fields">
+            <label class="sr-only" for="contactName">Your name</label>
+            <input id="contactName" name="name" type="text" placeholder="Your name" autocomplete="name" required>
+            <label class="sr-only" for="contactEmail">Your email</label>
+            <input id="contactEmail" name="email" type="email" placeholder="Your email" autocomplete="email" required>
+          </div>
+          <label class="sr-only" for="contactMessage">Your message</label>
+          <textarea id="contactMessage" name="message" rows="3" placeholder="What would you like to talk about?" required></textarea>
+          <button class="button button-primary" type="submit">Send a demo message <span aria-hidden="true">↗</span></button>
+          <p class="form-note">Portfolio demo: messages aren’t sent or stored yet.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer section-shell">
+    <a class="brand footer-brand" href="#home"><span class="brand-mark">A</span><span>abhishek<span class="brand-period">.</span></span></a>
+    <p>Made with curiosity, code & a little light.</p>
+    <a class="back-top" href="#home">Back to top ↑</a>
+    <span class="footer-copy">© <span id="currentYear"></span> Abhishek</span>
+  </footer>
+
+  <aside class="chat-widget" id="chatWidget" aria-label="Chatbot sample" hidden>
+    <div class="chat-widget-header">
+      <div class="chat-widget-title"><span class="chat-status"></span><div><strong>Chatbot sample</strong><small>Local demo · not AI-connected</small></div></div>
+      <button type="button" class="chat-close" id="chatClose" aria-label="Close chatbot">×</button>
+    </div>
+    <div class="chat-messages" id="chatMessages" aria-live="polite">
+      <div class="message message-bot">Hi! I’m a tiny sample of Abhishek’s chatbot project. Ask me about his learning journey.</div>
+    </div>
+    <form class="chat-form" id="chatForm">
+      <label class="sr-only" for="chatInput">Message the sample chatbot</label>
+      <input id="chatInput" type="text" placeholder="Ask me something..." autocomplete="off" required>
+      <button type="submit" aria-label="Send message">↑</button>
+    </form>
+  </aside>
+  <div class="toast-container" id="toastContainer" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
